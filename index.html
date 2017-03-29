@@ -263,6 +263,101 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/29/图片压缩/" itemprop="url">
+                  图片压缩
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-29T09:33:12+08:00" content="2017-03-29">
+              2017-03-29
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="利用canvas进行图片压缩"><a href="#利用canvas进行图片压缩" class="headerlink" title="利用canvas进行图片压缩"></a>利用canvas进行图片压缩</h1><p>直接上代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">       compress: <span class="function"><span class="keyword">function</span>(<span class="params">source_img_obj, quality, output_format</span>)</span>&#123;</div><div class="line">       <span class="keyword">var</span> mime_type = <span class="string">"image/jpeg"</span>;</div><div class="line">       <span class="keyword">if</span>(output_format!=<span class="literal">undefined</span> &amp;&amp; output_format==<span class="string">"png"</span>)&#123;</div><div class="line">          mime_type = <span class="string">"image/png"</span>;</div><div class="line">&#125;</div><div class="line">       <span class="keyword">var</span> cvs = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</div><div class="line">       <span class="comment">//naturalWidth真实图片的宽度</span></div><div class="line">       cvs.width = source_img_obj.naturalWidth;</div><div class="line">       cvs.height = source_img_obj.naturalHeight;</div><div class="line">       <span class="keyword">var</span> ctx = cvs.getContext(<span class="string">"2d"</span>).drawImage(source_img_obj, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">       <span class="keyword">var</span> newImageData = cvs.toDataURL(mime_type, quality/<span class="number">100</span>);<span class="comment">//quality/100值为0.1-1</span></div><div class="line">       <span class="keyword">var</span> result_image_obj = <span class="keyword">new</span> Image();</div><div class="line">       result_image_obj.src = newImageData;</div><div class="line">       <span class="keyword">return</span> result_image_obj;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/14/hexo-git搭建自己的博客/" itemprop="url">
                   hexo+git搭建自己的博客
                 </a>
@@ -383,7 +478,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -459,7 +554,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

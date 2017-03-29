@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jerry7723.github.io/"/>
-  <updated>2016-10-14T11:20:59.763Z</updated>
+  <updated>2017-03-29T01:41:38.612Z</updated>
   <id>http://jerry7723.github.io/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图片压缩</title>
+    <link href="http://jerry7723.github.io/2017/03/29/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/"/>
+    <id>http://jerry7723.github.io/2017/03/29/图片压缩/</id>
+    <published>2017-03-29T01:33:12.000Z</published>
+    <updated>2017-03-29T01:41:38.612Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="利用canvas进行图片压缩"><a href="#利用canvas进行图片压缩" class="headerlink" title="利用canvas进行图片压缩"></a>利用canvas进行图片压缩</h1><p>直接上代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">       compress: <span class="function"><span class="keyword">function</span>(<span class="params">source_img_obj, quality, output_format</span>)</span>&#123;</div><div class="line">       <span class="keyword">var</span> mime_type = <span class="string">"image/jpeg"</span>;</div><div class="line">       <span class="keyword">if</span>(output_format!=<span class="literal">undefined</span> &amp;&amp; output_format==<span class="string">"png"</span>)&#123;</div><div class="line">          mime_type = <span class="string">"image/png"</span>;</div><div class="line">&#125;</div><div class="line">       <span class="keyword">var</span> cvs = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</div><div class="line">       <span class="comment">//naturalWidth真实图片的宽度</span></div><div class="line">       cvs.width = source_img_obj.naturalWidth;</div><div class="line">       cvs.height = source_img_obj.naturalHeight;</div><div class="line">       <span class="keyword">var</span> ctx = cvs.getContext(<span class="string">"2d"</span>).drawImage(source_img_obj, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">       <span class="keyword">var</span> newImageData = cvs.toDataURL(mime_type, quality/<span class="number">100</span>);<span class="comment">//quality/100值为0.1-1</span></div><div class="line">       <span class="keyword">var</span> result_image_obj = <span class="keyword">new</span> Image();</div><div class="line">       result_image_obj.src = newImageData;</div><div class="line">       <span class="keyword">return</span> result_image_obj;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;利用canvas进行图片压缩&quot;&gt;&lt;a href=&quot;#利用canvas进行图片压缩&quot; class=&quot;headerlink&quot; title=&quot;利用canvas进行图片压缩&quot;&gt;&lt;/a&gt;利用canvas进行图片压缩&lt;/h1&gt;&lt;p&gt;直接上代码：&lt;/p&gt;
+&lt;figure cla
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo+git搭建自己的博客</title>
